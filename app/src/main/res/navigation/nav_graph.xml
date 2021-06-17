@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.raywenderlich.ndk_challenge.ui.loginscreen.LoginScreenFragment"
+        android:label="login_screen_fragment"
+        tools:layout="@layout/login_screen_fragment" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_profileScreen"
+            app:destination="@id/profileScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.raywenderlich.ndk_challenge.ui.registrationscreen.RegistrationFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_profileScreen"
+            app:destination="@id/profileScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.raywenderlich.ndk_challenge.ui.profile.ProfileScreen"
+        android:label="profile_screen_fragment"
+        tools:layout="@layout/profile_screen_fragment" />
+</navigation>
